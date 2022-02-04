@@ -1,48 +1,92 @@
 import { tw } from 'twind';
-import Particles from 'react-particles-js';
+import Particles from "react-tsparticles";
 import Arrow from '@/constants/svg/arrow.svg';
-
+/*
 const ParticleBg = () => (
   <Particles
-    params={{
-      particles: {
-        number: {
-          value: 400,
-          density: {
-            enable: true,
-            value_area: 3000,
-          },
+  id="tsparticles"
+  init={particlesInit}
+  loaded={particlesLoaded}
+  options={{
+    background: {
+      color: {
+        value: "#0d47a1",
+      },
+    },
+    fpsLimit: 120,
+    interactivity: {
+      events: {
+        onClick: {
+          enable: true,
+          mode: "push",
         },
-        line_linked: {
-          enable: false,
+        onHover: {
+          enable: true,
+          mode: "repulse",
         },
-        move: {
-          direction: `right`,
-          speed: 0.3,
+        resize: true,
+      },
+      modes: {
+        bubble: {
+          distance: 400,
+          duration: 2,
+          opacity: 0.8,
+          size: 40,
         },
-        size: {
-          value: 1,
+        push: {
+          quantity: 4,
         },
-        opacity: {
-          anim: {
-            enable: true,
-            speed: 0.5,
-            opacity_min: 0.1,
-          },
+        repulse: {
+          distance: 200,
+          duration: 0.4,
         },
       },
-      interactivity: {
-        events: {
-          onclick: {
-            enable: false,
-          },
-        },
+    },
+    particles: {
+      color: {
+        value: "#ffffff",
       },
-      retina_detect: true,
-    }}
-  />
+      links: {
+        color: "#ffffff",
+        distance: 150,
+        enable: true,
+        opacity: 0.5,
+        width: 1,
+      },
+      collisions: {
+        enable: true,
+      },
+      move: {
+        direction: "none",
+        enable: true,
+        outMode: "bounce",
+        random: false,
+        speed: 6,
+        straight: false,
+      },
+      number: {
+        density: {
+          enable: true,
+          area: 800,
+        },
+        value: 80,
+      },
+      opacity: {
+        value: 0.5,
+      },
+      shape: {
+        type: "circle",
+      },
+      size: {
+        random: true,
+        value: 5,
+      },
+    },
+    detectRetina: true,
+  }}
+/>
 );
-
+*/
 const articles = [
   {
     title: `Velit reprehenderit culpa Lorem reprehenderit excepteur ipsum esse.`,
@@ -60,12 +104,12 @@ const articles = [
     alt: `Proident pariatur est.`,
   },
 ];
+//       <ParticleBg />
 
 const CasesSection = () => (
   <section>
     <div className={tw(`w-full min-h-screen bg-gray-900 relative`)}>
       <div className={tw(`absolute left-0 top-0 h-screen w-full overflow-hidden`)}>
-        <ParticleBg />
       </div>
       <div className={tw(`max-w-7xl mx-4 lg:mx-auto pt-20 lg:pt-40`)}>
         <h1 className={tw(`text-white text-4xl lg:text-7xl font-bold text-center`)}>What will you build?</h1>
