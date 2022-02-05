@@ -3,26 +3,27 @@ import Check from '@/constants/svg/check.svg';
 import Button from '@/components/button';
 
 const features = [
-  `Laboris nulla`,
-  `Lorem pariatur nisi`,
-  `Id aute amet pariatur`,
-  `Do duis sint aliquip`,
-  `Nostrud duis tempor`,
-  `Consequat eiusmod`,
-  `Reprehenderit`,
-  `Adipisicing reprehenderit`,
+  `Automatic Replies`,
+  `Conversation Starters`,
+  `Flow Builder`,
+  `Keyword Trigger`,
+  `Integrations`,
+  `Comments Automation`,
+  `Story Mention Trigger`,
+  `And more ...`,
 ];
 
 const PricingTable = () => (
-  <section className={tw(`bg-gradient-to-b from-gray-100 to-white shadow-inner pt-12`)}>
+  <section id="pricing" className={tw(`bg-gradient-to-b from-gray-100 to-white shadow-inner pt-12`)}>
     <div className={tw(`relative max-w-7xl mx-auto mb-24`)}>
       <div className={tw(`overflow-hidden lg:max-w-none lg:flex`)}>
         <div className={tw(`py-8 px-6 md:px-0 lg:flex-shrink-1`)}>
           <h2 className={tw(`text-4xl lg:text-7xl font-bold text-gray-800 mb-12`)}>Are you ready?</h2>
           <p className={tw(`mt-6 text-base leading-6 text-gray-500`)}>
-            Lorem id ullamco pariatur eiusmod labore qui deserunt incididunt deserunt nostrud. Tempor duis in
-            adipisicing exercitation ipsum nostrud esse. Reprehenderit cupidatat sint est deserunt id eiusmod amet
-            aliqua officia.
+            Get started with access to basic features to engage up to 1,000 contacts FREE OF CHARGE
+            <br />
+            No credit card, or charge card, required! <br />
+            Ideal for those getting started with Chat Marketing
           </p>
           <div className={tw(`mt-8`)}>
             <div className={tw(`flex items-center`)}>
@@ -51,16 +52,18 @@ const PricingTable = () => (
         <div
           className={tw(
             `py-8 px-6 text-center lg:flex-shrink-0
-            lg:flex lg:flex-col lg:justify-center lg:p-12`,
+            lg:flex lg:flex-col lg:justify-center lg:p-12 ml-48`,
           )}
         >
           <p className={tw(`text-lg font-medium text-gray-800`)}>If you order now...</p>
           <div className={tw(`my-4 flex items-center justify-center text-6xl leading-none font-bold text-gray-800`)}>
-            $99/mo
+            $0/mo
           </div>
-          <Button primary modifier="mt-6">
-            Contact sales
-          </Button>
+          <a href="#header">
+            <button className={tw(`border bg-blue-600 text-white rounded-full p-4 font-medium text-m w-72`)}>
+              Join the Free Access List
+            </button>
+          </a>
         </div>
       </div>
     </div>

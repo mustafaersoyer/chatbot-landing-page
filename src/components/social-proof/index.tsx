@@ -4,22 +4,10 @@ import Quote from '@/constants/svg/quote.svg';
 
 const socialProofs = [
   {
-    name: `John Doe`,
-    company: `Alphabet Inc.`,
+    name: `M.E`,
+    company: 'Instagram Business Account Owner',
     image: `/images/social-1.webp`,
-    text: `Commodo Lorem consequat ea consectetur pariatur proident excepteur.
-    Pariatur eiusmod minim minim ipsum tempor aute excepteur minim eu nisi laboris.
-    Duis sunt labore eu eu cupidatat labore commodo id aliquip.`,
-  },
-  {
-    name: `Jack Doe`,
-    company: `Amazon.com, Inc.`,
-    image: `/images/social-2.webp`,
-    text: `Anim labore ut amet cupidatat pariatur pariatur labore ad est.
-    Fugiat eiusmod dolore aliquip aute duis esse excepteur amet.
-    Sit cupidatat ipsum culpa nisi esse ipsum culpa in consectetur.
-    Enim incididunt do sunt ex do. Proident duis nulla minim sunt irure est
-    magna nostrud Lorem consectetur irure.`,
+    text: `Any message to our page, day or night, is answered instantly, which definitely creates a professional impression and will increase our sales.`,
   },
 ];
 
@@ -65,8 +53,19 @@ const SocialProof = () => {
                       </span>
                     </p>
                   </div>
-                  <div className={tw(`cursor-pointer flex pb-12`)}>
-                    <svg
+                  <div className={tw(`cursor-pointer flex pb-12`)}></div>
+                </div>
+              </div>
+            </div>
+          </figure>
+        </section>
+      </div>
+    </div>
+  );
+};
+
+/*
+ <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width={44}
                       height={44}
@@ -96,15 +95,6 @@ const SocialProof = () => {
                       <path stroke="none" d="M0 0h24v24H0z" />
                       <polyline points="9 6 15 12 9 18" />
                     </svg>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </figure>
-        </section>
-      </div>
-    </div>
-  );
-};
+                    */
 
 export default SocialProof;

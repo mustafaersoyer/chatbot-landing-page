@@ -3,22 +3,16 @@ import FeatureSvg from '@/constants/svg/features.svg';
 
 const listItems = [
   {
-    title: `Designers`,
-    description: `Officia et fugiat mollit qui. Dolor elit aliqua voluptate ipsum
-    excepteur cillum consequat consectetur duis magna qui eu consequat occaecat.
-    Deserunt nisi sit.`,
+    title: `Connect`,
+    description: `Link your Instagram Business account to your Facebook account and login with that Facebook account.`,
   },
   {
-    title: `Developers`,
-    description: `Pariatur consectetur laboris exercitation duis laboris.
-    Commodo duis fugiat magna fugiat et ut anim elit. Tempor aute ex qui
-    tempor tempor.`,
+    title: `Build Automation Quickly`,
+    description: `Easily build and automate interactive conversations for Instagram Direct Messages that nurture relationships and lead to more conversions with our visual drag n’ drop interface. No coding experience needed.`,
   },
   {
-    title: `Product owners`,
-    description: `Ullamco consectetur ipsum eiusmod nisi adipisicing sint anim
-    dolore aute excepteur. Voluptate ea ullamco sunt eu elit qui aliquip.
-    Adipisicing.`,
+    title: `Let's Fun`,
+    description: `Increase your product sales, provide instant support, increase user satisfaction and reduce your workload.`,
   },
 ];
 
