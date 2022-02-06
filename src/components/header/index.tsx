@@ -11,7 +11,7 @@ const Header = () => {
 
   return (
     <section id="header">
-      <header className={tw(`sm:pb-28 sm:pt-20`)}>
+      <header className={tw(`sm:pb-28  sm:pt-20`)}>
         <div className={tw(`max-w-7xl mx-auto pt-8 px-7 sm:px-8 `)}>
           <h1
             className={tw(
@@ -29,7 +29,8 @@ const Header = () => {
           {!isEmailGet ? (
             <div
               className={tw(
-                `sm:mt-10 mt-6 flex flex-col  sm:flex-row  sm:justify-center sm:items-center w-full mx-auto space-x-4  space-y-4 sm:space-y-0`,
+                `sm:mt-10 mt-6 flex flex-col sm:flex-row  sm:justify-center sm:items-center w-full mx-auto sm:space-x-4
+                  space-y-4 sm:space-y-0`,
               )}
             >
               <input
@@ -42,6 +43,7 @@ const Header = () => {
                 placeholder="Your Best E-Mail"
               ></input>
               <button
+                className={tw(`border bg-blue-600 text-white rounded-full p-4 font-medium text-sm  `)}
                 onClick={() => {
                   ReactGA.event({
                     category: 'User',
@@ -58,7 +60,6 @@ const Header = () => {
                     .then((response) => response.json())
                     .then((data) => alert(JSON.stringify(data)));
                 }}
-                className={tw(`border bg-blue-600 text-white rounded-full p-4 font-medium text-sm w-72  `)}
               >
                 JOIN THE FREE ACCESS WAITLIST
               </button>

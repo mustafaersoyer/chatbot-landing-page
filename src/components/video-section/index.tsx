@@ -33,7 +33,7 @@ function VideoSection() {
           <Arrow width={28} className={tw(`origin-center rotate-180`)} />
         </div>
         <Carousel
-          className={tw(`max-w-xs pl-4 pr-4`)}
+          className={tw(`w-72 px-2 `)}
           showArrows={false}
           showStatus={false}
           showIndicators={false}
