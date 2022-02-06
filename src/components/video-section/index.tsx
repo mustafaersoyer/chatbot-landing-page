@@ -97,6 +97,7 @@ function VideoSection() {
           height="100%"
           width="100%"
           playing={playing}
+          muted={true}
           onReady={() => {
             setPlay(true);
           }}
