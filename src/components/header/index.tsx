@@ -51,14 +51,16 @@ const Header = () => {
                   });
 
                   // Simple POST request with a JSON body using fetch
-                  const requestOptions = {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ email: email }),
-                  };
-                  fetch('/api/users', requestOptions)
-                    .then((response) => response.json())
-                    .then((data) => alert(JSON.stringify(data)));
+                  if (email !== '') {
+                    const requestOptions = {
+                      method: 'POST',
+                      headers: { 'Content-Type': 'application/json' },
+                      body: JSON.stringify({ email: email }),
+                    };
+                    fetch('/api/users', requestOptions).then((response) => response.json());
+                  } else {
+                    alert('Please enter your email');
+                  }
                 }}
               >
                 JOIN THE FREE ACCESS WAITLIST
