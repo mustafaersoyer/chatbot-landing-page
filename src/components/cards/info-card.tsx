@@ -21,16 +21,16 @@ const InfoCard = (props: IInfoCard) => {
           </div>
           <p className={tw(`pl-12 pt-2 text-base`)}>{props.description}</p>
           <p className={tw(`pl-12 pt-6 text-base`)}>
-            Learn More <hr className={tw(`w-20`)}></hr>
+            <a href="#learnMore"> Learn More </a>
           </p>
+          <hr className={tw(`w-20`)}></hr>
         </div>
       ) : (
         <div className={tw(`ml-12 flex space-x-5  `)}>
           {props.icon}
           <button className="border-none" onClick={() => props.onClick()}>
-            <p className={tw(`font-medium text-2xl `)}>
-              {props.title} <hr className={tw(`w-70 `)}></hr>
-            </p>
+            <p className={tw(`font-medium text-2xl `)}>{props.title}</p>
+            <hr className={tw(`w-70 `)}></hr>
           </button>
         </div>
       )}

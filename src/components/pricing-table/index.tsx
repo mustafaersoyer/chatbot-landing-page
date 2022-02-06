@@ -52,7 +52,7 @@ const PricingTable = () => (
         <div
           className={tw(
             `py-8 px-6 text-center lg:flex-shrink-0
-            lg:flex lg:flex-col lg:justify-center lg:p-12 ml-48`,
+            lg:flex lg:flex-col lg:justify-center lg:p-12`,
           )}
         >
           <p className={tw(`text-lg font-medium text-gray-800`)}>If you order now...</p>
@@ -60,9 +60,9 @@ const PricingTable = () => (
             $0/mo
           </div>
           <a href="#header">
-            <button className={tw(`border bg-blue-600 text-white rounded-full p-4 font-medium text-m w-72`)}>
+            <Button primary modifier="mt-6">
               Join the Free Access List
-            </button>
+            </Button>
           </a>
         </div>
       </div>

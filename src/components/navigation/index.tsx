@@ -15,7 +15,7 @@ type Link = {
 const links = [
   {
     label: `FEATURES`,
-    href: `/`,
+    href: `#features`,
   },
   {
     label: `PRICING`,
@@ -23,14 +23,7 @@ const links = [
   },
   {
     label: `CONTACT`,
-    href: `/`,
-  },
-];
-
-const secondaryLinks = [
-  {
-    label: `Get Started`,
-    href: `/`,
+    href: `#footer`,
   },
 ];
 
@@ -81,19 +74,6 @@ const MobileMenu = () => (
           {link.label}
         </a>
       ))}
-    </div>
-    <div className={tw(`pt-4 pb-3 border-t border-gray-400`)}>
-      <div className={tw(`px-2 space-y-1`)}>
-        {secondaryLinks.map((link: Link) => (
-          <a
-            key={`mobile-${link.label}`}
-            href={link.href}
-            className={tw(`block px-3 py-2 text-base font-medium text-gray-500`)}
-          >
-            {link.label}
-          </a>
-        ))}
-      </div>
     </div>
   </div>
 );
