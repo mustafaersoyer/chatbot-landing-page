@@ -7,7 +7,7 @@ const Header = () => {
   const handleChange = (e: any) => {
     setEmail(e.target.value);
   };
-  const [isEmailGet, setIsEmailGet] = useState(true);
+  const [isEmailGet, setIsEmailGet] = useState(false);
 
   return (
     <section id="header">
