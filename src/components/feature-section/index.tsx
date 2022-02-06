@@ -56,7 +56,7 @@ const FeatureSection = () => (
               <div className={tw(`ml-4 text-xl`)}>Modern platform</div>
             </div>
             <p className={tw(`leading-loose text-gray-500`)}>
-              Our platform has been created using modern technologies and modern designs. We use the latest versions of
+              AutoRepl. has been created using modern technologies and modern designs. We use the latest versions of
               Instagram and Facebook technologies.
             </p>
           </div>
@@ -66,7 +66,7 @@ const FeatureSection = () => (
               <div className={tw(`ml-4 text-xl`)}>Integrations</div>
             </div>
             <p className={tw(`leading-loose text-gray-500`)}>
-              You can easily integrate our platform with various marketplaces, file storage areas and package programs.
+              You can easily integrate AutoRepl. with various marketplaces, file storage areas and package programs.
               (Coming soon.)
             </p>
           </div>

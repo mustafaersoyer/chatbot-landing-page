@@ -1,19 +1,5 @@
 import { tw, css } from 'twind/css';
-import Button from '@/components/button';
-import Netlify from '@/constants/svg/netlify.svg';
-import Nike from '@/constants/svg/nike.svg';
-import Figma from '@/constants/svg/figma.svg';
-import Aws from '@/constants/svg/aws.svg';
-import Instagram from '@/constants/svg/ig.svg';
-import Instagram2 from '@/constants/svg/ig-2.svg';
-import Facebook from '@/constants/svg/facebook.svg';
-import Google from '@/constants/svg/google-g.svg';
-import Meta from '@/constants/svg/meta.svg';
-import Google2 from '@/constants/svg/google-2.svg';
-const headerStyle = css`
-  background-color: #ffffff;
-  min-height: 100vh;
-`;
+import ReactGA from 'react-ga';
 
 const Header = () => (
   <section id="header">
@@ -36,7 +22,15 @@ const Header = () => (
           )}
         >
           <input className={tw(`rounded-md border h-12 p-2 border-blue-600`)} placeholder="Your Best E-Mail"></input>
-          <button className={tw(`border bg-blue-600 text-white rounded-full p-4 font-medium text-sm w-72  `)}>
+          <button
+            onClick={() => {
+              ReactGA.event({
+                category: 'User',
+                action: 'Clicked join button',
+              });
+            }}
+            className={tw(`border bg-blue-600 text-white rounded-full p-4 font-medium text-sm w-72  `)}
+          >
             JOIN THE FREE ACCESS WAITLIST
           </button>
         </div>

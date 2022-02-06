@@ -18,9 +18,9 @@ function VideoSection() {
   const [activeCarouselIndex, setActiveCarouselIndex] = useState(0);
   return (
     <section className={tw(`sm:ml-12 flex flex-col sm:flex-row items-start  `)}>
-      <div className={tw(`flex flex-row sm:hidden justify-between  `)}>
+      <div className={tw(`flex flex-row sm:hidden  ml-2`)}>
         <div
-          className="   ml-2 mt-12 pt-6 "
+          className=" mt-12 pt-6 "
           onClick={() => {
             console.log('index', activeCarouselIndex);
             let newIndex;
@@ -33,7 +33,7 @@ function VideoSection() {
           <Arrow width={28} className={tw(`origin-center rotate-180`)} />
         </div>
         <Carousel
-          className={tw(`max-w-xs px-4`)}
+          className={tw(`max-w-xs pl-4 pr-4`)}
           showArrows={false}
           showStatus={false}
           showIndicators={false}

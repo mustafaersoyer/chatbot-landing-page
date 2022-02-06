@@ -86,11 +86,11 @@ const Navigation = () => {
     <nav className={tw(`bg-white`)}>
       <div className={tw(`max-w-full mx-auto px-4 sm:px-6 lg:px-8 `)}>
         <div className={tw(`flex items-center justify-between h-24`)}>
-          <div className={tw(`flex items-center`)}>
+          <div className={tw(`flex items-center space-x-4`)}>
             <div className={tw(`flex-shrink-0`)}>
-              <img className={tw(`h-12 w-12`)} src="logo.svg" alt="logo" width={48} height={48} />
+              <img className={tw(`h-16 w-16`)} src="logo-3.png" alt="logo" width={64} height={64} />
             </div>
-            <p className={tw(`font-bold text-lg `)}>ManyChat</p>
+            <p className={tw(`font-extrabold text-2xl `)}>AutoRepl.</p>
           </div>
           <div className={tw(`hidden md:block`)}>
             <div className={tw(`ml-10 flex items-baseline space-x-4`)}>

@@ -4,7 +4,7 @@ import Quote from '@/constants/svg/quote.svg';
 
 const socialProofs = [
   {
-    name: `M.E`,
+    name: `M.E.`,
     company: 'Instagram Business Account Owner',
     image: `/images/social-1.webp`,
     text: `Any message to our page, day or night, is answered instantly, which definitely creates a professional impression and will increase our sales.`,

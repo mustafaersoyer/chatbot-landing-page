@@ -15,9 +15,11 @@ const MobileInfoCard = (props: IInfoCard) => {
           <p className={tw(`font-semibold text-base `)}> {props.title}</p>
         </div>
         <div>
-          <p className={tw(`font-light text-sm `)}>
-            Learn More <hr className={tw(`w-70 `)}></hr>
-          </p>
+          <a href="#features">
+            <p className={tw(`font-light text-sm `)}>
+              Learn More <hr className={tw(`w-70 `)}></hr>
+            </p>
+          </a>
         </div>
       </div>
     </div>
