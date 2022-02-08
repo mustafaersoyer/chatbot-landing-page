@@ -61,7 +61,7 @@ function VideoSection() {
         <InfoCard
           isActive={activeIndex === 0}
           title="Automate Conversations"
-          description="Supercharge your Instagram marketing with messaging and business automations"
+          description="Boost your Instagram interaction with messaging and business automations"
           icon={<Instagram width={28} />}
           onClick={() => {
             setActiveIndex(0);

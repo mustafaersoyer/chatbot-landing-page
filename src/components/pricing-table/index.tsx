@@ -20,10 +20,9 @@ const PricingTable = () => (
         <div className={tw(`py-8 px-6 md:px-0 lg:flex-shrink-1`)}>
           <h2 className={tw(`text-4xl lg:text-7xl font-bold text-gray-800 mb-12`)}>Are you ready?</h2>
           <p className={tw(`mt-6 text-base leading-6 text-gray-500`)}>
-            Get started with access to basic features to engage up to 1,000 contacts FREE OF CHARGE
+            Get started with access to basic features to engage your users and grow your business.
             <br />
-            No credit card, or charge card, required! <br />
-            Ideal for those getting started with Chat Marketing
+            No credit card required! <br />
           </p>
           <div className={tw(`mt-8`)}>
             <div className={tw(`flex items-center`)}>

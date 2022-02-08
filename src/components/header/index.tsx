@@ -18,12 +18,12 @@ const Header = () => {
               `font-sans font-bold text-5xl md:text-5xl lg:text-8xl text-center  leading-snug text-gray-800`,
             )}
           >
-            Engage your customers <br />
+            Auto Reply your customers <br />
             instantly
           </h1>
           <div className={tw(`max-w-4xl mx-auto`)}>
             <p className={tw(`sm:mt-10 mt-4 text-gray-700 text-center text-l lg:text-3xl`)}>
-              Automate interactive conversations in Instagram Direct Messages to grow your brand.{' '}
+              Automate your Instagram Messages like the pros the easy way to grow your brand.{' '}
             </p>
           </div>
           {!isEmailGet ? (

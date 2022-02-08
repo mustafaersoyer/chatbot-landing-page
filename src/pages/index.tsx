@@ -8,8 +8,16 @@ import CasesSection from '@/components/cases-section';
 import SocialProof from '@/components/social-proof';
 import PricingTable from '@/components/pricing-table';
 import Footer from '@/components/footer';
+import ReactGA from 'react-ga';
+import { useEffect } from 'react';
 
 export default function Home() {
+  useEffect(() => {
+    ReactGA.initialize('G-59FTPW4G56');
+
+    ReactGA.pageview('Init page view');
+  }, []);
+
   return (
     <Page>
       <NextSeo
