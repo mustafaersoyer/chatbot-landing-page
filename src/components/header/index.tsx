@@ -12,13 +12,13 @@ const Header = () => {
   return (
     <section id="header">
       <header className={tw(`sm:pb-28  sm:pt-20`)}>
-        <div className={tw(`max-w-7xl mx-auto pt-8 px-7 sm:px-8 `)}>
+        <div className={tw(`max-w-8xl mx-auto pt-8 px-7 sm:px-8 `)}>
           <h1
             className={tw(
               `font-sans font-bold text-5xl md:text-5xl lg:text-8xl text-center  leading-snug text-gray-800`,
             )}
           >
-            Auto Reply your customers <br />
+            Auto reply your customers <br />
             instantly
           </h1>
           <div className={tw(`max-w-4xl mx-auto`)}>
