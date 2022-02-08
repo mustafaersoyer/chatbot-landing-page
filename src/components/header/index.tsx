@@ -57,7 +57,7 @@ const Header = () => {
                       headers: { 'Content-Type': 'application/json' },
                       body: JSON.stringify({ email: email }),
                     };
-                    fetch('/api/users', requestOptions).then((response) => response.json());
+                    fetch('/api/users', requestOptions).then((response) => setIsEmailGet(true));
                   } else {
                     alert('Please enter your email');
                   }
