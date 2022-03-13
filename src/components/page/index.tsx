@@ -10,6 +10,7 @@ const Page = ({ children }: IProps) => (
   <div>
     <Head>
       <link rel="icon" href="/logo-3.png" />
+      <meta name="yandex-verification" content="75243f256f91513a" />
     </Head>
     <div className={tw(`min-h-screen flex flex-col`)}>
       <Navigation />
