@@ -37,6 +37,22 @@ class MyDocument extends Document {
       <Html lang="en">
         <Head>
           <script async src="https://scripts.simpleanalyticscdn.com/latest.js" />
+          <meta name="yandex-verification" content="75243f256f91513a" />
+
+          {/* Global Site Tag (gtag.js) - Google Analytics */}
+          <script async src={`https://www.googletagmanager.com/gtag/js?id=G-59FTPW4G56`} />
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-59FTPW4G56', {
+                page_path: window.location.pathname,
+              });
+          `,
+            }}
+          />
         </Head>
         <body>
           <Main />
