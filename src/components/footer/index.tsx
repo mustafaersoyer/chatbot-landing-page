@@ -26,12 +26,7 @@ const Footer = () => (
         {' '}
         <div className="flex flex-col">
           <p>If you have a question or anything, feel free to email me:</p>
-          <a
-            href="mailto:
-      info@autorepl.com"
-          >
-            info@autorepl.com
-          </a>
+          <a href="mailto:1mustafaersoy@gmail.com">1mustafaersoy@gmail.com</a>
         </div>
       </div>
       <div className={tw(`w-full lg:w-1/2 mt-12 lg:mt-0`)}>
