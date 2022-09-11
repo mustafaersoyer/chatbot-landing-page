@@ -56,7 +56,7 @@ const PricingTable = () => (
         >
           <p className={tw(`text-lg font-medium text-gray-800`)}>If you order now...</p>
           <div className={tw(`my-4 flex items-center justify-center text-6xl leading-none font-bold text-gray-800`)}>
-            $0/mo
+            $9.90/mo
           </div>
           <a href="#header">
             <Button primary modifier="mt-6">
