@@ -83,13 +83,30 @@ const MobileMenu = () => (
 );
 
 const Navigation = () => {
+  let name = "Mustafa ERSOY";
   const [showMenu, setShowMenu] = useState(false);
+  const [showLoginButton, setShowLoginButton] = useState(true);
   const toggleMenu = () => setShowMenu(!showMenu);
   const responseFacebook = (response:any) => {
-    console.log(response);
+    if(response['name']){
+      setShowLoginButton(false);
+      name = response['name'];
+
+      const requestOptions = {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: response,
+      };
+      fetch('/api/fbUsers', requestOptions).then((response) => console.log(response));
+    
+    }
+
+  
+    
   }
   const componentClicked = () => {
-    console.log('clic');
+    console.log('clic');     
+
   }
   return (
     <nav className={tw(`bg-white`)}>
@@ -117,8 +134,7 @@ const Navigation = () => {
           <div className={tw(`hidden md:block`)}>
            
             
- 
-          <FacebookLogin
+          {showLoginButton ?  <FacebookLogin
             appId="527580845195247"
             autoLoad={false}
             fields="name,email,picture"
@@ -126,7 +142,9 @@ const Navigation = () => {
             callback={responseFacebook}
             size="small"
             textButton='Login With Facebook'
-             />
+             /> : "Teşekkürler, " + name}
+
+         
   
     
           </div>
