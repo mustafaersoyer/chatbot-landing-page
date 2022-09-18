@@ -87,7 +87,7 @@ const Navigation = () => {
   const [showMenu, setShowMenu] = useState(false);
   const [showLoginButton, setShowLoginButton] = useState(true);
   const toggleMenu = () => setShowMenu(!showMenu);
-  const responseFacebook = (response:any) => {
+  const responseFacebook = async (response:any) => {
     if(response['name']){
       setShowLoginButton(false);
       name = response['name'];
@@ -98,10 +98,9 @@ const Navigation = () => {
         headers: { 'Content-Type': 'application/json' },
       };
       let userLongLivedAccessToken;
-      fetch(fbApiToGetUserLongLivedAccessToken,requestOptionsForFb).then(function(response)  {
-        console.log(response.body);
-        console.log(response.json);
-      } );
+      await fetch(fbApiToGetUserLongLivedAccessToken,requestOptionsForFb).then((response) => response.json()).then((data) => {userLongLivedAccessToken= data.access_token; console.log(data.access_token)} )  .catch(console.error);;
+      response['long_lived_token'] = userLongLivedAccessToken;
+      response['expire_date'] = new Date(new Date().setDate(new Date().getDate() + 60));
 
       console.log(response);
        const requestOptionsForMongo = {
@@ -109,7 +108,7 @@ const Navigation = () => {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(response),
       };
-      fetch('/api/fbusers', requestOptionsForMongo);
+      await fetch('/api/fbusers', requestOptionsForMongo);
     
     }
 
