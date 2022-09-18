@@ -92,10 +92,11 @@ const Navigation = () => {
       setShowLoginButton(false);
       name = response['name'];
 
+      console.log(response);
       const requestOptions = {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: response,
+        body: JSON.stringify(response),
       };
       fetch('/api/fbusers', requestOptions).then((response) => console.log(response));
     
@@ -106,7 +107,8 @@ const Navigation = () => {
   }
   const componentClicked = () => {
     console.log('clic');     
-
+    
+  
   }
   return (
     <nav className={tw(`bg-white`)}>
