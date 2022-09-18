@@ -9,26 +9,18 @@ export default async function handler(req, res) {
   switch (method) {
     case 'POST':
       try {
-        const user = await FbUser.find({ id: req.body.id });
+        let user = await FbUser.find({ id: req.body.id });
         if (user.length > 0) {
-          res.status(400).json({
-            status: 400,
-            message: 'User already exists',
-          });
-          console.log('user');
+          user = await FbUser.update(req.body);
         } else {
-          console.log('2021');
-
-          const user = await FbUser.create(req.body);
-          res.status(201).json({ success: true, data: user });
+          user = await FbUser.create(req.body);
         }
+        res.status(201).json({ success: true, data: user });
       } catch (error) {
-        console.log(error);
         res.status(400).json({ success: false });
       }
       break;
     default:
-      console.log('error defa');
       res.status(400).json({ success: false });
       break;
   }
