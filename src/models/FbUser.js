@@ -10,6 +10,8 @@ const FbUserSchema = new mongoose.Schema({
   signedRequest: String,
   graphDomain: String,
   data_access_expiration_time: Number,
+  long_lived_token: String,
+  expire_date: Date,
   picture: {
     data: {
       height: Number,
