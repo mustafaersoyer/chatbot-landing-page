@@ -15,7 +15,10 @@ export default async function handler(req, res) {
             status: 400,
             message: 'User already exists',
           });
+          console.log('user');
         } else {
+          console.log('2021');
+
           const user = await FbUser.create(req.body);
           res.status(201).json({ success: true, data: user });
         }
@@ -25,6 +28,7 @@ export default async function handler(req, res) {
       }
       break;
     default:
+      console.log('error defa');
       res.status(400).json({ success: false });
       break;
   }
