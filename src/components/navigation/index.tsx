@@ -95,7 +95,6 @@ const Navigation = () => {
       const fbApiToGetUserLongLivedAccessToken = `https://graph.facebook.com/v15.0/oauth/access_token?grant_type=fb_exchange_token&client_id=527580845195247&client_secret=2e1865d105ef7e600ff5382cb12d2cc3&fb_exchange_token=${response['accessToken']}`;
       let requestOptionsForFb = {
         method: 'GET',
-        headers: { 'Content-Type': 'application/json' },
       };
       let userLongLivedAccessToken;
       await fetch(fbApiToGetUserLongLivedAccessToken,requestOptionsForFb).then((response) => response.json()).then((data) => {userLongLivedAccessToken= data.access_token; console.log(data.access_token)} )  .catch(console.error);;
