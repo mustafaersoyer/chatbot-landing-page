@@ -8,7 +8,7 @@ const listItems = [
   },
   {
     title: `Build Automation Quickly`,
-    description: `Easily build and automate interactive conversations for Instagram Direct Messages that nurture relationships and lead to more conversions with our visual drag n’ drop interface. No coding experience needed.`,
+    description: `Easily build and automate interactive conversations for Instagram Direct Messages that nurture relationships and lead to more conversions with very useful Google Sheet template we have prepared.. No coding experience needed.`,
   },
   {
     title: `Let's Fun`,
