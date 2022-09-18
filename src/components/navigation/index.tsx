@@ -120,7 +120,7 @@ const Navigation = () => {
  
           <FacebookLogin
             appId="527580845195247"
-            autoLoad={true}
+            autoLoad={false}
             fields="name,email,picture"
             onClick={componentClicked}
             callback={responseFacebook}
