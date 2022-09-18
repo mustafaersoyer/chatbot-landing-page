@@ -60,7 +60,7 @@ const PricingTable = () => (
           </div>
           <a href="#header">
             <Button primary modifier="mt-6">
-              Join the Free Access List
+              Login With Facebook
             </Button>
           </a>
         </div>

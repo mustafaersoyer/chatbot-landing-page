@@ -1,6 +1,10 @@
 import { tw } from 'twind';
 import { useState } from 'react';
 import Button from '@/components/button';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import FacebookLogin from 'react-facebook-login';
+ 
 
 interface IMenuButton {
   toggleMenu: React.MouseEventHandler<HTMLButtonElement>;
@@ -81,7 +85,12 @@ const MobileMenu = () => (
 const Navigation = () => {
   const [showMenu, setShowMenu] = useState(false);
   const toggleMenu = () => setShowMenu(!showMenu);
-
+  const responseFacebook = (response:any) => {
+    console.log(response);
+  }
+  const componentClicked = () => {
+    console.log('clic');
+  }
   return (
     <nav className={tw(`bg-white`)}>
       <div className={tw(`max-w-full mx-auto px-4 sm:px-6 lg:px-8 `)}>
@@ -106,9 +115,20 @@ const Navigation = () => {
             </div>
           </div>
           <div className={tw(`hidden md:block`)}>
-            <div className={tw(`ml-4 flex items-center md:ml-6`)}>
-              <Button>Join the Free Access Waitlist</Button>
-            </div>
+           
+            
+ 
+          <FacebookLogin
+            appId="527580845195247"
+            autoLoad={true}
+            fields="name,email,picture"
+            onClick={componentClicked}
+            callback={responseFacebook}
+            size="small"
+            textButton='Login With Facebook'
+             />
+  
+    
           </div>
           <div className={tw(`-mr-2 flex md:hidden`)}>
             <MenuButton showMenu={showMenu} toggleMenu={toggleMenu} />

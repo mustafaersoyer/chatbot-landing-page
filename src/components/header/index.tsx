@@ -63,7 +63,7 @@ const Header = () => {
                   }
                 }}
               >
-                JOIN THE FREE ACCESS WAITLIST
+                LET'S CONTACT YOU
               </button>
             </div>
           ) : (
