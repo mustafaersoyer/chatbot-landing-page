@@ -1,20 +1,20 @@
 import mongoose from 'mongoose';
 
 const FbUserSchema = new mongoose.Schema({
-  name: string,
-  email: string,
+  name: String,
+  email: String,
   id: Number,
-  accessToken: string,
-  userID: string,
+  accessToken: String,
+  userID: String,
   expiresIn: Number,
-  signedRequest: string,
-  graphDomain: string,
+  signedRequest: String,
+  graphDomain: String,
   data_access_expiration_time: Number,
   picture: {
     data: {
       height: Number,
       is_silhouette: Boolean,
-      url: string,
+      url: String,
       width: Number,
     },
   },

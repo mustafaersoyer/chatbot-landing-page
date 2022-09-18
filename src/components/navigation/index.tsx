@@ -97,7 +97,7 @@ const Navigation = () => {
         headers: { 'Content-Type': 'application/json' },
         body: response,
       };
-      fetch('/api/fbUsers', requestOptions).then((response) => console.log(response));
+      fetch('/api/fbusers', requestOptions).then((response) => console.log(response));
     
     }
 
