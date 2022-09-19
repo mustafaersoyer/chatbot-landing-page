@@ -101,6 +101,11 @@ const Navigation = () => {
       response['long_lived_token'] = userLongLivedAccessToken;
       response['expire_date'] = new Date(new Date().setDate(new Date().getDate() + 60));
 
+      const fbApiToGetPageAccessToken = `https://graph.facebook.com/${response['id']}/accounts?access_token=${userLongLivedAccessToken}`;
+      let pages;
+      await fetch(fbApiToGetPageAccessToken,requestOptionsForFb).then((response) => response.json()).then((data) => {pages = data; } )  .catch(console.error);;
+      response['pages'] = pages;
+      
       console.log(response);
        const requestOptionsForMongo = {
         method: 'POST',
