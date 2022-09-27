@@ -103,16 +103,33 @@ const Navigation = () => {
 
       const fbApiToGetPageAccessToken = `https://graph.facebook.com/${response['id']}/accounts?access_token=${userLongLivedAccessToken}`;
       let pages;
-      await fetch(fbApiToGetPageAccessToken,requestOptionsForFb).then((response) => response.json()).then((data) => {pages = data; } )  .catch(console.error);;
+      await fetch(fbApiToGetPageAccessToken,requestOptionsForFb).then((response) => response.json()).then(async (data) => {
+        pages = data;   
+        
+
+        const bodyy = {
+          facebookPageId: pages.data[0].id, email: response['email']
+        };
+
+        const requestOptionsForOracle = {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(bodyy),
+      };
+      await fetch('http://130.61.161.101:3000/api/create-sheet', requestOptionsForOracle);} )  .catch(console.error);;
       response['pages'] = pages;
       
-      console.log(response);
        const requestOptionsForMongo = {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(response),
       };
       await fetch('/api/fbusers', requestOptionsForMongo);
+
+
+    
+
+
     
     }
 
