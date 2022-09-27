@@ -38,7 +38,6 @@ class MyDocument extends Document {
         <Head>
           <script async src="https://scripts.simpleanalyticscdn.com/latest.js" />
           <meta name="yandex-verification" content="75243f256f91513a" />
-          <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"/>
 
           {/* Global Site Tag (gtag.js) - Google Analytics */}
           <script async src={`https://www.googletagmanager.com/gtag/js?id=G-59FTPW4G56`} />
