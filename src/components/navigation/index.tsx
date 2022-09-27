@@ -158,7 +158,8 @@ const Navigation = () => {
             callback={responseFacebook}
             size="small"
             textButton='Login With Facebook'
-             /> : "Teşekkürler, " + name}
+
+             /> : "Thanks, " + name}
 
          
   
