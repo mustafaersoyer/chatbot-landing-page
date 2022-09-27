@@ -158,7 +158,7 @@ const Navigation = () => {
             callback={responseFacebook}
             size="small"
             textButton='Login With Facebook'
-
+            scope="public_profile,pages_messaging,pages_show_list"
              /> : "Thanks, " + name}
 
          
