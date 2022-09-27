@@ -142,6 +142,7 @@ const Navigation = () => {
   
   }
   return (
+
     <nav className={tw(`bg-white`)}>
       <div className={tw(`max-w-full mx-auto px-4 sm:px-6 lg:px-8 `)}>
         <div className={tw(`flex items-center justify-between h-24`)}>
